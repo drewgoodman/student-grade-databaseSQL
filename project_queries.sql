@@ -36,7 +36,7 @@ FROM course c
 JOIN grade g 
 ON g.grade_course_id = c.course_id
 GROUP BY c.course_name
-ORDER BY AVG(g.grade_score) DESC;
+ORDER BY AVG(g.grade_score);
 
 -- WHICH STUDENT AND PROFESSOR HAVE THE MOST COURSES IN COMMON:
 
