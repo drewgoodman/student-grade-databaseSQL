@@ -40,5 +40,16 @@ ORDER BY AVG(g.grade_score) DESC;
 
 -- WHICH STUDENT AND PROFESSOR HAVE THE MOST COURSES IN COMMON:
 
--- SELECT p.professor_name AS "Professor", s.student_name AS "student"
--- FROM professor p 
+SELECT
+	p.professor_name AS "Professor",
+    s.student_name AS "Student"
+FROM professor p 
+JOIN course c 
+ON c.course_professor_id = p.professor_id
+JOIN grade g 
+ON g.grade_course_id = c.course_id
+JOIN student s 
+ON s.student_id = g.grade_student_id
+GROUP BY p.professor_name, s.student_name
+ORDER BY COUNT(s.student_name) DESC
+LIMIT 1

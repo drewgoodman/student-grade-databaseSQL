@@ -196,6 +196,9 @@ INSERT INTO grade(grade_score, grade_student_id, grade_course_id)
 VALUES (RAND() * 100, 6, 1);
 
 INSERT INTO grade(grade_score, grade_student_id, grade_course_id)
+VALUES (RAND() * 100, 6, 2);
+
+INSERT INTO grade(grade_score, grade_student_id, grade_course_id)
 VALUES (RAND() * 100, 6, 3);
 
 INSERT INTO grade(grade_score, grade_student_id, grade_course_id)
